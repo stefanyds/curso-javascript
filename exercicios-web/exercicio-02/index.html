@@ -1,0 +1,58 @@
+<!--
+    A finalidade deste programa é aplicar conceitos do curso de JavaScript.
+    Com base no ano de nascimento e no sexo, o programa irá apresentar
+    uma imagem e um texto informando se é Criança, Jovem, Adulto ou Idoso.
+
+    Copyright (C) 2020 ProgrammerHero.com.br
+
+    Este programa é um software gratuito: você pode redistribuí-lo e / ou modificar
+    sob os termos da Licença Pública Geral GNU, publicada pela
+    Free Software Foundation, versão 3 da Licença ou
+    (a seu critério) qualquer versão posterior.
+
+    Este programa é distribuído na esperança de que seja útil,
+    mas SEM QUALQUER GARANTIA; sem sequer a garantia implícita de
+    COMERCIALIZAÇÃO ou ADEQUAÇÃO PARA UMA FINALIDADE ESPECÍFICA. Veja o
+    GNU General Public License para mais detalhes.
+
+    Você deveria ter recebido uma cópia da Licença Pública Geral GNU
+    junto com este programa. Caso contrário, consulte <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" id="txtano" name="txtano" min="0">
+
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; ProgrammerHero</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<h1>Projeto</h1>
+
+<ul class="tree">
+    <li>
+        <span ph-folder>backend</span>
+        <ul>
+            <li>
+                <span ph-folder>app</span>
+                <ul>
+                    <li>produto</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span ph-folder>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span ph-folder>frontend</span>
+        <ul>
+            <li>
+                <span ph-folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="../css/tree.css"> <!-- acessando a pasta que não se encontra na mesma pasta do código-->
+
+<script>
+    document.querySelectorAll('[ph-folder]').forEach(directory => {
+        directory.onclick = function(event) {
+            const ul = directory.nextElementSibling
+            const view = ul.style.display
+            ul.style.display = view === 'none' ? 'block' : 'none'
+            /*
+            if(view === 'none'){
+                ul.style.display = 'block'
+            } else {
+                ul.style.display = 'none'
+            }
+            */
+        }
+    })
+
+</script>

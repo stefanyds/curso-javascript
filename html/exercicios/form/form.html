@@ -1,0 +1,49 @@
+<h1>Formulários</h1>
+
+<form method="POST">
+    <input type="hidden" name="codigo-usuario" value="222">
+    <input type="text" name="nome" required>
+    <textarea name="biografia" cols="30" rows="10"></textarea>
+    
+    <div id="user-types">
+        <input type="radio" name="tipo" value="admin">Administrador
+        <input type="radio" name="tipo" value="teacher">Professor
+        <input type="radio" name="tipo" value="student">Aluno
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo" value="active">Ativo
+    </div>
+
+    <select name="estado">
+        <option value="">Selecione uma opção</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="PR">Paraná</option>
+        <option value="RS">Rio Grande do Sul</option>
+    </select>
+
+    <select name="interesses" multiple size="7">
+        <option value="js">JavaScript</option>
+        <option value="html5">HTML5</option>
+        <option value="css3">CSS3</option>
+        <option value="nodejs">Node.js</option>
+        <option value="express">Express.JS</option>
+        <option value="bootstrap4">Bootstrap4</option>
+        <option value="jquery">Jquery</option>
+    </select>
+
+    <input type="password" name="senha">
+    
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+</form>
+
+<style>
+    input,textarea, select {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type=radio], input[type=checkbox] {
+        display: inline;
+    }
+</style>

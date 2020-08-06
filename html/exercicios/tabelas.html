@@ -1,0 +1,89 @@
+<h1>Tabelas</h1>
+<!--
+<h2>thead - cabeçalho</h2>
+<h2>tbody - corpo</h2>
+<h2>tfoot - rodapé</h2>
+-->
+
+<table>
+    <caption>Produtos</caption>
+    <thead>
+        <tr> <!--Linha da tabela-->
+            <th>Produto</th> <!--Título da coluna-->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>5.490,00</td>
+            <td>10</td>
+            <td>54.900,00</td>
+        </tr>
+        <tr>
+            <td>Moto G6</td>
+            <td>650,00</td>
+            <td>10</td>
+            <td>6.500,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>61.400,00</td>
+        </tr>
+     
+    </tfoot>
+</table>
+
+<h2>Tabela HTML 1.0</h2>
+<table border="1">
+        <tr> <!--Linha da tabela-->
+            <th>Produto</th> <!--Título da coluna-->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>iPad</td>
+            <td>5.490,00</td>
+            <td>10</td>
+            <td>54.900,00</td>
+        </tr>
+        <tr>
+            <td>Moto G6</td>
+            <td>650,00</td>
+            <td>10</td>
+            <td>6.500,00</td>
+        </tr>
+        <tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>61.400,00</td>
+            </tr>
+        </tr>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse; /* sem borda - tirar border="1" */
+    }
+    th, td {
+        padding: 10px;
+
+    }
+    
+    thead tr {
+        border-bottom: solid 3px #444;
+    }
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>

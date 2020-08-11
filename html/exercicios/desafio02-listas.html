@@ -1,16 +1,19 @@
 <h1>Projeto</h1>
 
 <ul class = "tree">
-    <li> backend
+    <li> 
+        <span>backend</span>
         <ul> 
-            <li> app
+            <li> 
+                <span>app</span>
                 <ul> 
                     <li>produto</li>
                     <li>usuario.js</li>
                     <li>venda.js</li>
                 </ul>
             </li>
-            <li> config
+            <li> 
+                <span>config</span>
                 <ul>
                     <li>banco.js</li>
                     <li>rotas.js</li>
@@ -19,9 +22,11 @@
             </li>
         </ul>
     </li>
-    <li> frontend
+    <li> 
+        <span>frontend</span>
         <ul>
-            <li> public
+            <li> 
+                <span>public</span>
                 <ul>
                     <li>app.css</li>
                     <li>app.js</li>
@@ -36,18 +41,17 @@
 
 
 <script>
-let ul = document.querySelectorAll(ul).forEach(function (directory){
-    directory.onclick = function(event) {
-        for(const i in ul){
-            const p = ul[i]
-            const view = p.style.display
-            if(view === 'none'){
-                p.style.display = 'block'
+let directories = document.querySelectorAll('li > span')
+        for(let i = 0; i < directories.length; i++){
+            console.log(directories[i])
+            directories[i].onclick = function event(){
+                const ul = directories[i].nextElementSibling
+                const view = ul.style.display
+                if(view === 'none'){
+                ul.style.display = 'block'
             } else {
-                p.style.display = 'none'
+                ul.style.display = 'none'
+            }
             }
         }
-
-    }
-}
 </script>

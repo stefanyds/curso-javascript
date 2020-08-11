@@ -1,0 +1,53 @@
+<h1>Projeto</h1>
+
+<ul class = "tree">
+    <li> backend
+        <ul> 
+            <li> app
+                <ul> 
+                    <li>produto</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li> config
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li> frontend
+        <ul>
+            <li> public
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="../css/tree.css"> <!-- acessando a pasta que não se encontra na mesma pasta do código-->
+
+
+<script>
+let ul = document.querySelectorAll(ul).forEach(function (directory){
+    directory.onclick = function(event) {
+        for(const i in ul){
+            const p = ul[i]
+            const view = p.style.display
+            if(view === 'none'){
+                p.style.display = 'block'
+            } else {
+                p.style.display = 'none'
+            }
+        }
+
+    }
+}
+</script>

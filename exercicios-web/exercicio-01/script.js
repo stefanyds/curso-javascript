@@ -25,7 +25,7 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
 
-    msg.innerHTML = `Àgora são ${hora} horas.`
+    msg.innerHTML = `Agora são ${hora} horas.`
     if (hora >= 0 && hora < 12) {
         img.src = "img/manha.png"
         window.document.body.style.background = '#C5732C'

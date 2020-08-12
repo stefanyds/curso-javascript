@@ -41,9 +41,10 @@
 
 
 <script>
+
 let directories = document.querySelectorAll('li > span')
         for(let i = 0; i < directories.length; i++){
-           // console.log(directories[i])
+            console.log(directories[i])
             directories[i].onclick = function event(){
                 const ul = directories[i].nextElementSibling
                 const view = ul.style.display
@@ -58,9 +59,14 @@ let tag = document.querySelectorAll('span')
         for(let j = 0; j < tag.length; j++){
             let t = tag[j]
             console.log(t)
-           // let txt = t.toString()
-            //tag[j].innerHTML = txt.bold
-            
-        
+            tag[j].innerHTML = `<b>${t.textContent}</b>`  //OU t.outerText
         }
+/*
+        debugger
+document.querySelectorAll('span').forEach(element => {
+    //debugger
+    console.log(element)
+    element.innerHTML = `<b>${element.outerText}</b>`
+})
+*/
 </script>

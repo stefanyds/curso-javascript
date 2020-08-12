@@ -36,7 +36,7 @@ ul.tree li {
 
 
 ul.tree li:last-child {
-    border-left:
+    border-left: none;
 }
 
 ul.tree li::before {

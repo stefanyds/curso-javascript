@@ -43,7 +43,7 @@
 <script>
 let directories = document.querySelectorAll('li > span')
         for(let i = 0; i < directories.length; i++){
-            console.log(directories[i])
+           // console.log(directories[i])
             directories[i].onclick = function event(){
                 const ul = directories[i].nextElementSibling
                 const view = ul.style.display
@@ -53,5 +53,14 @@ let directories = document.querySelectorAll('li > span')
                 ul.style.display = 'none'
             }
             }
+        }
+let tag = document.querySelectorAll('span')
+        for(let j = 0; j < tag.length; j++){
+            let t = tag[j]
+            console.log(t)
+           // let txt = t.toString()
+            //tag[j].innerHTML = txt.bold
+            
+        
         }
 </script>

@@ -1,0 +1,47 @@
+<h1>Tags Não Visuais</h1>
+
+<h2>Tags semânticas</h2>
+<ul>
+    <li>section - agrupamento temático de conteúdo</li>
+    <li>article - conteúdo auto-contido</li>
+    <li>header - cabeçalho do documento</li>
+    <li>footer - rodapé do documento</li>
+    <li>nav - agrupa links de navegação</li>
+    <li>aside - ao lado - sidebar - adendo - relacionado com o conteúdo em volta do documento</li>
+    <li>details - exibe detalhes que podem ser exibidos ou escondidos</li>
+</ul>
+
+<h2>Tags agrupadoras</h2>
+<ul>
+    <li>div - divisão ou seção do documento</li>
+    <li>span - agrupamento em linha (inline)</li>
+</ul>
+
+<hr>
+
+<div>Área 1</div>
+<div>Área 2</div>
+
+<p>
+    Quando vires um homem bom, <span class="custom">tente imitá-lo;</span> quando vires um homem mau, <span class="custom">examina-te a ti mesmo.</span>
+    <p>Confúcio</p>
+</p>
+
+<!--span: recurso de quebra de linha inline
+div: quebra porque o seu display é block -->
+
+<style>
+    div {
+        display: inline;
+    }
+
+    span {
+        display: block;
+    }
+    .custom {
+        font-weight: bold;
+        color: chocolate;
+        font-size: 1.1rem; 
+    }
+</style>
+<!--1rem = 16px -->

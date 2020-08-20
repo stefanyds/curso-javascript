@@ -6,7 +6,33 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* Seletor global (*) aplica estilos em todo documento */
+        /* Seletor tag (.tag) aplica estilos nas classes .tag  */
+        /* Seletor id (#aprovados) aplica estilos no #id informado */
+        /* Seletor filho direto (#aprovados > li:first-of-type) retorna o primeiro li */
+        /* Seletor descendente (#aninhado section) retorna o section filho do id #aninhado */
+        /* Seletor irmão adjacente (p + ul) todas <ul> com uma tag pai <p>, primeira tag logo depois do <p> */
+        /* Seletor geral de irmãos (p ~ ol) todas as tags <ol> dentro de <p> são selecionadas */
+        /* Seletor atributo [feira] todas as tags com atributo 'feira' */
+        /* Seletor atributo [feira=casa] todas as tags com atributo 'feira' com valor 'casa' */
+       /* Seletor atributo [feira~=empresa] todas as tags com atributo 'feira' que tenham algum valor 'empresa' */
+       /* Seletor atributo [feira*=sa] todas as tags com atributo 'feira' que tenham alguma expressão no valor igual a 'sa' */
+        /* Qual o primeiro elemento <span> do documento?  span:nth-child(1) */
+        /* Section > :nth-child(odd) = todos os filhos ímpares de <section> */
+        /* Section > :nth-child(even) = todos os filhos 
+        pares de <section> */
+        /* Section > :nth-child(1) = o primeiro filho de <section> */
+        /* :root cria variáveis */
+
+        :root {
+            --font-color: yellow;
+            --background-color: hotpink;
+
+        }
+       section > :nth-child(odd), ul, p {
+            color: var(--font-color);
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +55,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>

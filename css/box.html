@@ -5,7 +5,31 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body {
+            font-size: 80px;
+            margin: 0;
+        }
+        .c1 {
+            background-color: orange;
+        }
+        .c2 {
+            background-color: skyblue;
+        }
+        .c3 {
+            background-color: tomato;
+        }
+        div {
+            float: left; /* Todos eles se alinham a esquerda */
+            /* float: right; O primeiro elemento vai para a "última" posição*/
+            padding-top: 100px;
+            padding: 10px 50px 100px 150px;
+            padding: 100px 150px;
+            padding: 50px;
+            /* O padding é medido a partir do elemento */
+            margin: 0px 20px;
+            border: solid 15px yellowgreen;
+        }
+
     </style>
 </head>
 

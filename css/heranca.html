@@ -5,12 +5,26 @@
     <meta charset="UTF-8">
     <title>Herança</title>
     <style>
-        /* ... */
+        html {
+            border: dashed 3px black;
+        }
+
+        body {
+            font-family: monospace;
+            font-size: 40px;
+            border: solid 3px red;
+            padding: 10px;
+        }
+
+        div {
+            border: inherit;  /* unset: destrói a herança */
+            padding: inherit;
+        } 
     </style>
 </head>
 
 <body>
-    <h1>Herança</h1>
+    <h1 style="background-color: green; font-size: 3em;">Herança</h1>
     <div>Estou herdando</div>
 </body>
 

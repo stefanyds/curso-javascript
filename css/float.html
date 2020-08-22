@@ -11,18 +11,32 @@
 
         .c1 {
             background-color: red;
+            float: right;
         }
 
         .c2 {
             background-color: green;
+            clear: right; /*Ele deixou a linha pro vermelho e desceu o verde.*/
+            float: left; /*O verde fica em cima do amarelo.*/
         }
         
         .c3 {
             background-color: blue;
+            /* clear: right; */
+            clear: both;
         }
 
         .c4 {
             background-color: orange;
+            float: right;
+        }
+        
+        div {
+            height: 150px;
+            width: 150px;
+            /* display: inline; */
+            /* float: right; */
+            /* float: left; */
         }
     </style>
 </head>

@@ -5,16 +5,39 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+        ul {
+            padding: 0;
+        }
+        div {
+            background-color: seagreen;
+        }
+        span {
+            background-color: dodgerblue;
+        }
+        div, span, li {
+            width: 50%; /* 50% do body, o inline não vai responder a esse comando */
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            
+            /* display: inline; */
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
     <div>Texto 1</div>
-    <span>Texto 2</span>
+    <span>Texto 2</span> <!-- display: inline -->
     <span>Texto 3</span>
-    <ul>
-        <li>Item 1</li>
+    <ul>  <!-- display: block-->
+        <li>Item 1</li> <!-- display: block -->
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>

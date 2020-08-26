@@ -7,7 +7,89 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        *{
+            font-family: 'Oswald';
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: lightgray;
+            margin: 0px;
+        }
+
+        .cabecalho {
+            position: relative;
+        }
+
+        .menu {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 290px;
+            width: 300px;
+            height: 80px;
+        }
+
+        .logo {
+            background-color: #333;
+            box-shadow: 0px 3px 0px 0px skyblue;
+        }
+        .menu-toggle {
+            background-color: lightgray;
+            position: absolute;
+            top: 45px;
+            right: 20px;
+        }
+
+        .autenticacao {
+            position: absolute;
+            top: 35px;
+            right: 0px;
+            width: 130px;
+            height: 80px;
+            /* color: white; */
+        }
+
+        .autenticacao a {
+            padding: 10px;
+        }
+
+        li {
+            color: white;
+            display: inline-block;
+            padding: 10px 10px;
+        }
+
+        .botao {
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: white;
+            background-color: red;
+        }
+
+        .menu a:hover {
+            background-color: skyblue;
+            color: black;
+            padding: 5px 5px;
+        }
+
+        @media (min-width: 679px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        @media (max-width: 910px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+        @media (max-width: 680px) {
+            .menu {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
@@ -38,7 +120,7 @@
             </ul>
         </nav>
         <aside class="autenticacao">
-            <a href="#login">Login</a>
+            <a href="#login" class="login">Login</a>
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>

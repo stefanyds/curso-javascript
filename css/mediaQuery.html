@@ -12,6 +12,27 @@
             border: solid 5px;
             display: none;
         }
+
+        /* Se a largura for no máximo 600px de largura, essa classe será aplicada */
+        @media (max-width: 600px) {
+            .muito-pequeno {
+                display: block;
+            }
+        }
+
+        /* Se a largura for no máximo 1000px ou retrato, essa classe será aplicada */
+        @media (max-width: 1000px), (orientation: portrait;) {
+            .pequeno-retrato {
+                display: block;
+            }
+        }
+
+        /* Se a largura for maior ou igual a 500px e menor ou igual a 1000px, essa classe será aplicada */
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>

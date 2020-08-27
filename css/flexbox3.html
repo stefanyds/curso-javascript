@@ -6,7 +6,23 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+        /* Quando flex-direction:row, flex-basis é a largura. 
+        Quando flex-direction: column, flex-basis é a altura. */
+        .flex-container div {
+            flex-basis: 100px; /*é como se estivesse usando o width*/
+        }
+        .flex-container div:nth-child(4) {
+            /* grow shrink basis */
+            flex: 3 5 100px; /* vai diminuir e aumentar mais que os outros*/
+        }
+        .flex-container {
+            width: 300px; /*usa o grow = 3*/
+            width: 600px; /*usa o shrink = 5*/
+        }
     </style>
 </head>
 

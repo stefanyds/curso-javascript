@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
+        }
+        .cabecalho {
+            background: #333; /*O background vence o background-color*/
+            border-bottom: solid 5px skyblue;
+            height: 80px;
+            box-sizing: content-box; /*Para que o valor da borda não seja relevante no tamanho total*/
+        }
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 10px;
+        }
+        .logo img {
+            height: 100%; /*Vai pegar 100% do componente pai (.logo)*/
+        }
+        .menu-toggle {
+            float: right;
+            color: white;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+        .menu {
+            display: inline-block; /*Quero que ele fique inline mas que eu consiga trabalhar com altura e largura*/
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+        .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+        }
+        .menu a {
+            padding: 15px;
+        }
+        .autenticacao {
+            float: right;
+            height: 80px;
+            padding: 25px;
+        }
+        .menu a:hover,
+        .menu a.selected {
+            background-color: deepskyblue;
+            color: #333;
+        }
+        .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+        .destaque {
+            background-color: red;
+            color: white;
+        }
+        /* largura de 679px ou mais */
+        @media(min-width: 679px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        /* largura máxima de 680px ou menos */
+        @media(max-width: 680px) {
+            .menu {
+                display: none;
+            }
+        }
+        /* largura máxima de 910px ou menos */
+        @media(max-width: 910px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+        /*position:absolute cria vários layers*/
+        /*Botão é sempre inline*/
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://programmerhero.com.br/wp-content/uploads/2020/07/cropped-logo-05-2.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login" class="login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1] /*O split coloca em um array tudo que tiver #*/
+            const newURL = e.newURL.split('#')[1] /*e.newURL e e.oldURL é uma propriedade da onhashchange, mas o nome da const pode ser outra coisa*/
+            /*Por causa da onhashchange, o split vai ter dois valores no array, como queremos somente o que está depois de # (posição 1), colocamos o [1]*/
+            console.log(oldURL,newURL)
+
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+
+            if (newLink) /*trabalha como true or false */{
+                newLink.classList.add('selected')
+            }
+            if (oldLink) {
+                oldLink.classList.remove('selected')
+            }
+
+            /*newLink && newLink.classList.add('selected')
+            oldLink && oldLink.classList.remove('selected')*/
+        }
+    </script>
+</body>
+
+</html>

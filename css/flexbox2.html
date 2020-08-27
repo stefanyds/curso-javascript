@@ -6,7 +6,49 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+        
+        /* Todos os elementos dentro de 'flex-container' possuem a 'ordem:0'. 
+        Os elementos que possuem uma 'ordem maior' são exibidos por último.
+        Os elementos que possuem uma 'ordem menor' são exibidos por primeiro. 
+        A ordem é uma medida de 'peso' */
+
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            order: 1;
+            order: 0;
+            order: -1;
+            align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch; /*padrão*/
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0; /*sem preenchimento*/
+            flex-grow: 1; /*cada caixa recebe o peso 1*/
+        }
+
+        /* flex-grow trabalha quando a área é maior que os elementos */
+        .flex-container div:nth-child(1) {
+            flex-grow: 2;
+        }
+
+        /* flex-shrink tem o comportamento ao contrário do flex-grow. 
+        Para ser ativado, o flex-shrink é necessário que a área total seja menor que a área somada de todos o itens.
+        Utilizado para diminuir o tamanho dos itens em um flex-container */
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1;
+        }
+        .flex-container div:first-child {
+            flex-shrink: 5;
+        }
     </style>
 </head>
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style>
+        :root {
+            --page-background-color: lightgray;
+            --header-background-color: #333;
+            --header-font-color: #fff;
+            --header-border-bottom-color: skyblue;
+            --menu-font-family: 'Oswald', sans-serif;
+            --menu-font-color: #fff;
+            --menu-hover-background-color: skyblue;
+            --menu-hover-font-color: #333;
+            --button-register-background-color: tomato;
+            --button-register-font-color: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--menu-font-family);
+            background-color: var(--page-background-color);
+        }
+
+        .cabecalho {
+            background: var(--header-background-color);
+            color: var(--header-font-color);
+            border-bottom: solid 5px var(--header-border-bottom-color);
+            height: 80px;
+        }
+
+        .logo img {
+            height: 70px;
+            margin-top: 5px;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: var(--menu-font-color);
+            font-size: 1.3em;
+            padding: 10px 15px;
+        }
+
+        .menu a:hover {
+            background-color: var(--menu-hover-background-color);
+            color: var(--menu-hover-font-color);
+        }
+
+        .cabecalho .botao {
+            border-radius: 30px;
+            padding:  10px 25px;
+            margin-right: 10px;
+        }
+
+        .destaque {
+            background: var(--button-register-background-color);
+            color: var(--button-register-font-color);
+        }
+
+        /*Solução com Flexbox*/
+
+        .cabecalho {
+            display: flex;
+            flex-direction: row;
+            align-items: center; /*cross-axis, ele depende do flex-direction, se ele for column, o cross axis vai ser o eixo x*/
+            justify-content: space-between; /*main-axis*/
+        }
+
+        .menu {
+            flex-grow: 10; /*O tamanho dele aumenta. Cresce mais que os demais componentes*/
+        }
+
+        .menu ul {
+            /* <ul> é o container dos <li>'s' */
+            /* deixando ele como 'display:flex' */
+            /* todos os <li>'s vão se alinhar horizontalmente, */
+            /* pois o padrão é 'flex-direction:row' */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menu li {
+            margin: 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://programmerhero.com.br/wp-content/uploads/2020/07/cropped-logo-05-2.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+</body>
+
+</html>

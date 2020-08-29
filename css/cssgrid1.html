@@ -22,6 +22,85 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            /* grid com 02 colunas: */
+            grid-template-columns: 50% 50%;
+            /* função: repeat(multiplicador, col1 col2 col3 ...)
+            grid com 12 colunas = 4 x 3 = 12 
+            cada coluna com 8.33% de tela*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            /* grid com 4 colunas */
+            grid-template-columns: repeat(4, 8.33%);
+            /* grid com 12 colunas */
+            grid-template-columns: repeat(12, 8.33%);
+            /* A função repeat() pode ser agrupada com outros valores de colunas após sua definição. */
+            grid-template-columns: repeat(11, 100px) 200px; /*a última coluna fica com 200px*/
+            /* existem outras funções... por exemplo: minmax(100px, 300px) informa o valor mínimo e máximo que uma coluna ou linha pode ter. */
+
+            /* ************** */
+
+            /*  1a. coluna 200px
+                2a. coluna 20%
+                3a. coluna 1 fragmentoo (pega o que sobra)
+                obs.: somente a 1a. coluna é fixa. */
+            grid-template-columns: 200px 20% 1fr; /*o fragmento é o que sobrou*/
+
+            /*  Layout com 12 colunas
+                1a. coluna 3/12 avos da tela
+                2a. coluna 6/12 avos da tela
+                3a. coluna 3/12 avos da tela
+                Todas as colunas são responsivas. */
+            grid-template-columns: 3fr 6fr 3fr;
+
+            /* Trabalhando com linhas */
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+
+            /*  Vejam que interessante: 
+                Como temos 03 colunas, obrigatoriamente teremos 04 linhas. 
+                Porém, na na instrução abaixo, apenas 02 linhas foram definidas no css-grid.
+                Neste caso, ocorre o seguinte:grid-template-columns: 
+                1a. linha com altura de 100px;
+                2a. linha com altura de 1fr (máximo possível de expansão da linha);
+                3a. linha com a altura do conteúdo da div;
+                4a. linha com altura do conteúdo da div; */
+            grid-template-rows: 100px 1fr;
+
+            /*  1a. linha com altura de 100px;
+                2a. linha automática (1fr)
+                3a. linha automática (1fr)
+                4a. linha automática (1fr) */
+            grid-template-rows: 100px auto;
+        }
+
+        .d8 {
+            /* Linhas verticais */
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-column-end: span 2;
+            /* Linhas horizontais */
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2; /*quantas linhas ele vai pular*/
+        }
+
+        /* Sobreposição de células */
+        .d10, .d11 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            z-index: 0;
+            z-index: 1;
+            z-index: 10;
+            /* indiferente o valor positivo*/
+            z-index: -1;
+        }
+
     </style>
 </head>
 

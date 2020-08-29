@@ -20,6 +20,48 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            /* grid 3x3 */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            /* grid 3x3 - nomeando as colunas */
+            grid-template-columns: 
+                [inicio] 1fr
+                [metade-1 meio-1] 1fr
+                [metade-2 meio-2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .d1 {
+            grid-column-start: metade-2;
+            grid-column-end: fim;
+
+            /* redimensionando com propriedades 'shotcut', é obrigatório o uso da barra '/' para separar os valores */
+            grid-column: meio-1 / fim;
+            grid-row: 1 / span 2;
+            grid-row: 1 / 3;
+
+            /* outra propriedade 'shotcut' é grid-area.
+            Parametros:
+                row-start / column-start / row-end / column-end */
+            
+            grid-area: 1 / meio-1 / span 2 / fim;
+            grid-area: 1 / meio-1 / 3 / fim;
+        }
+
+        body {
+            /* espaçamento entre linhas e colunas */
+            column-gap: 20px;
+            row-gap: 20px;
+
+            /* 'shotcut' para espaçamento entre linhas e colunas */
+            gap: 50px 10px; /*O primeiro é pra linha e o segundo para coluna*/
+            gap: 10px;
+        }
+
     </style>
 </head>
 

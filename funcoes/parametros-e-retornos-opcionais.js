@@ -20,4 +20,5 @@ console.log(area())
 console.log(area(2, 3, 15, 20, 50))
 
 //undefined
+//pq não tem um return dentro do if
 console.log(area(5, 5))

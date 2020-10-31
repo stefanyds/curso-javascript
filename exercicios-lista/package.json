@@ -1,0 +1,21 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "Exercicios JavaScript em node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "clear && nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exercicios",
+    "javascript"
+  ],
+  "author": "stefany",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

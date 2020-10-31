@@ -20,4 +20,10 @@ function PontuacaoJogos (pontuacoes) {
     return[recordes, piorJogo]
 }
 
-console.log(PontuacaoJogos(stringPontuacoes))
+const executar = () => {
+    console.log('Exercício 08')
+    console.log(PontuacaoJogos(stringPontuacoes))
+    console.log('----------')
+} 
+
+module.exports = { executar }

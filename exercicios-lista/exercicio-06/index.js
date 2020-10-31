@@ -7,5 +7,11 @@ const JurosCompostos = (capitalInicial, taxa, tempo) => {
     return JurosCompostos.toFixed(2)
 }
 
-console.log(JurosSimples(100, 10/100, 16))
-console.log(JurosCompostos(100,10/100,16))
+const calcularJSC = () => {
+    console.log('Exercício 06')
+    console.log(JurosSimples(100, 10/100, 16))
+    console.log(JurosCompostos(100,10/100,16))
+    console.log('----------')
+} 
+
+module.exports = { calcularJSC }

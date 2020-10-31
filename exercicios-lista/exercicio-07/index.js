@@ -11,6 +11,12 @@ const bhaskara = (ax2, bx, c) => {
     return raizes
 }
 
-console.log(bhaskara(1, 3, 2))
-console.log(bhaskara(3,1,2))
-console.log(bhaskara(3,5,-5))
+const bhaskaraCalcular = () => {
+    console.log('Exercício 07')
+    console.log(bhaskara(1, 3, 2))
+    console.log(bhaskara(3,1,2))
+    console.log(bhaskara(3,5,-5))
+    console.log('----------')
+}
+
+module.exports = { bhaskaraCalcular }

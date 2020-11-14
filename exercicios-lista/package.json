@@ -4,7 +4,8 @@
   "description": "Exercicios JavaScript em node.js",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js",
+    "lint": "eslint src/**/*.js",
+    "fix": "eslint src/**/*.js --fix",
     "start": "nodemon",
     "dev": "clear && nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -19,7 +19,3 @@ exercicio05.formatarValorDecimal(0.1 + 0.2);
 exercicio06.calcularJSC();
 exercicio07.bhaskaraCalcular();
 exercicio08.executar();
-
-if ('test' == 'test') {
-  console.log('Test ok');
-}

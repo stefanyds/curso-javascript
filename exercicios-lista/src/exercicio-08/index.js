@@ -1,3 +1,5 @@
+const logger = require('../../logger');
+
 const stringPontuacoes = '10,20,20,8,25,3,0,30,1';
 
 function PontuacaoJogos(pontuacoes) {
@@ -21,9 +23,9 @@ function PontuacaoJogos(pontuacoes) {
 }
 
 const executar = () => {
-  console.log('Exercício 08');
-  console.log(PontuacaoJogos(stringPontuacoes));
-  console.log('----------');
+  logger.info('Exercício 08');
+  logger.info(PontuacaoJogos(stringPontuacoes));
+  logger.info('----------');
 };
 
 module.exports = { executar };

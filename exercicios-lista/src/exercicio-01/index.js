@@ -1,5 +1,6 @@
+const logger = require('../../logger');
 // function Ope(a,b){
-//     console.log(a+b,a-b,a*b,a/b)
+//     logger.info(a+b,a-b,a*b,a/b)
 // }
 
 // Execução
@@ -7,11 +8,11 @@
 
 // Função Arrow
 const calcular = (a, b) => {
-  console.log('Exercício 01');
-  console.log(`Soma = ${a + b} 
+  logger.info('Exercício 01');
+  logger.info(`Soma = ${a + b} 
 Subtração = ${a - b}
 Multiplicação = ${a * b}`);
-  console.log('----------');
+  logger.info('----------');
 };
 
 // Execução

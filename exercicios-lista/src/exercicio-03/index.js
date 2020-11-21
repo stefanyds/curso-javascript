@@ -1,16 +1,18 @@
-const calcular = (b, e) => (b ** e);
+const logger = require('../../logger');
+
+const calcular = (b, e) => b ** e;
 // antigo: math.pow(b,e)
 
-// console.log(calcular(2,1))
-// console.log(calcular(3,2))
-// console.log(calcular(2,3))
+// logger.info(calcular(2,1))
+// logger.info(calcular(3,2))
+// logger.info(calcular(2,3))
 
 const calcular3 = () => {
-  console.log('Exercício 03');
-  console.log(calcular(2, 1));
-  console.log(calcular(3, 2));
-  console.log(calcular(2, 3));
-  console.log('----------');
+  logger.info('Exercício 03');
+  logger.info(calcular(2, 1));
+  logger.info(calcular(3, 2));
+  logger.info(calcular(2, 3));
+  logger.info('----------');
 };
 
 module.exports = { calcular3 };

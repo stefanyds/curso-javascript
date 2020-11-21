@@ -1,3 +1,5 @@
+const logger = require('../../logger');
+
 const bhaskara = (ax2, bx, c) => {
   const delta = bx ** 2 - 4 * ax2 * c;
   // let raizes = []
@@ -15,11 +17,11 @@ const bhaskara = (ax2, bx, c) => {
 };
 
 const bhaskaraCalcular = () => {
-  console.log('Exercício 07');
-  console.log(bhaskara(1, 3, 2));
-  console.log(bhaskara(3, 1, 2));
-  console.log(bhaskara(3, 5, -5));
-  console.log('----------');
+  logger.info('Exercício 07');
+  logger.info(bhaskara(1, 3, 2));
+  logger.info(bhaskara(3, 1, 2));
+  logger.info(bhaskara(3, 5, -5));
+  logger.info('----------');
 };
 
 module.exports = { bhaskaraCalcular };

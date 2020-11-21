@@ -1,10 +1,12 @@
+const logger = require('../../logger');
+
 function formatarValorDecimal(a) {
   // toFixed(2) duas casas decimais
   // toString e replace para poder mudar . - > ,
-  console.log('Exercício 05');
+  logger.info('Exercício 05');
   const valorEmReais = `R$ ${a.toFixed(2).toString().replace('.', ',')}`;
-  console.log(valorEmReais);
-  console.log('----------');
+  logger.info(valorEmReais);
+  logger.info('----------');
 }
 
 module.exports = { formatarValorDecimal };

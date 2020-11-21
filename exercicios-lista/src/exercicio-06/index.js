@@ -1,3 +1,5 @@
+const logger = require('../../logger');
+
 const JurosSimples = (capitalInicial, taxa, tempo) => {
   const JSimples = capitalInicial + capitalInicial * taxa * tempo;
   return JSimples;
@@ -8,10 +10,10 @@ const JurosCompostos = (capitalInicial, taxa, tempo) => {
 };
 
 const calcularJSC = () => {
-  console.log('Exercício 06');
-  console.log(JurosSimples(100, 10 / 100, 16));
-  console.log(JurosCompostos(100, 10 / 100, 16));
-  console.log('----------');
+  logger.info('Exercício 06');
+  logger.info(JurosSimples(100, 10 / 100, 16));
+  logger.info(JurosCompostos(100, 10 / 100, 16));
+  logger.info('----------');
 };
 
 module.exports = { calcularJSC };

@@ -1,13 +1,15 @@
+const logger = require('../../logger');
+
 const triangulo = (b, h, l) => {
-  console.log('Exercício 02');
+  logger.info('Exercício 02');
   if (b === h && h === l) {
-    console.log('Triângulo Equilátero');
+    logger.info('Triângulo Equilátero');
   } else if (b === h || b === l || h === l) {
-    console.log('Triângulo Isósceles');
+    logger.info('Triângulo Isósceles');
   } else {
-    console.log('Triângulo Escaleno');
+    logger.info('Triângulo Escaleno');
   }
-  console.log('----------');
+  logger.info('----------');
 };
 
 // triangulo(2,2,2)

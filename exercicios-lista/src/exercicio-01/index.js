@@ -9,10 +9,18 @@ const logger = require('../../logger');
 // Função Arrow
 const calcular = (a, b) => {
   logger.info('Exercício 01');
-  logger.info(`Soma = ${a + b} 
-Subtração = ${a - b}
-Multiplicação = ${a * b}`);
   logger.info('----------');
+  const result = {
+    soma: a + b,
+    subtracao: a - b,
+    multiplicacao: a * b,
+    divisao: a / b,
+  };
+  logger.info(
+    `soma = ${result.soma}, subtracao = ${result.subtracao}, multiplicacao = ${result.multiplicacao}, divisao = ${result.divisao}`
+  );
+  logger.info('----------');
+  return result;
 };
 
 // Execução

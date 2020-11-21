@@ -11,4 +11,12 @@ module.exports = {
   rules: {
     'no-plusplus': 'off',
   },
+  overrides: [
+    {
+      files: ['**/test/**/*.spec.js'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };

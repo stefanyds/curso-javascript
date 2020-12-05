@@ -8,7 +8,8 @@
     "fix": "eslint src/**/*.js --fix",
     "start": "clear && nodemon",
     "dev": "clear && nodemon",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {
